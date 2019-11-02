@@ -8,20 +8,18 @@
                 <v-btn text @click="loginAsGuest">Entrar como visitante</v-btn>
             </v-col>
         </v-row>
-        
-       <feedback/>
 
     </v-container>
 </template>
 
 <script>
 
-    import Feedback from '../feedback/Feedback.vue';
+    
 
 export default {
         //AIzaSyD7pw_3NCFH7OxYI6OQTuGm8V0wv-lE4KU
     name: 'LoginPage',
-    components: { Feedback },
+    
     data() {
         return {
             token: '',
@@ -34,7 +32,7 @@ export default {
                 this.$store.commit('setAuthToken', this.token);
                 this.$router.push('/book');
             } else{
-                this.$store.commit('showErrorMessege', 'Você deve obrigatoriamente informar um token.');
+                this.$store.commit('showErrorMessage', 'Você deve informar um token.');
             }
             //alert(this.$store.state.authToken);
         },

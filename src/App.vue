@@ -1,14 +1,18 @@
 <template>
   <v-app>
-   <router-view />
-  </v-app>
+       
+        
+            <router-view />
+        
+
+        <feedback />
+    </v-app>
 </template>
 
 <script>
-
-
-export default {
-  name: 'App',
-  
-};
+    import Feedback from "./components/feedback/Feedback.vue";
+    export default {
+        name: "App",
+        components: { Feedback },
+    };
 </script>
